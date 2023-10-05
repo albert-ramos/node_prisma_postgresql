@@ -8,7 +8,7 @@
     "db:migrate": "npx prisma migrate dev --name user-entity --create-only && yarn prisma generate",
     "db:push": "npx prisma db push",
     "build": "tsc . -p",
-    "vercel-build": "npx prisma generate && tsc . -p && npx prisma db push"
+    "vercel-build": "npx prisma generate && tsc . -p && npx prisma migrate deploy"
   },
   "devDependencies": {
     "@types/bcryptjs": "^2.4.2",
