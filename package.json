@@ -7,7 +7,8 @@
     "start": "ts-node-dev --respawn --transpile-only --exit-child src/app.ts",
     "db:migrate": "npx prisma migrate dev --name user-entity --create-only && yarn prisma generate",
     "db:push": "npx prisma db push",
-    "build": "npx prisma generate && tsc . -p"
+    "build": "tsc . -p",
+    "vercel-build": "npx prisma generate && tsc . -p && npx prisma db push"
   },
   "devDependencies": {
     "@types/bcryptjs": "^2.4.2",
